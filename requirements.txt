@@ -10,5 +10,6 @@ pywin32
 rich
 ultralytics
 pillow
+lapx
 gradio==3.38.0
 git+https://github.com/fauskanger/D3DShot#egg=D3DShot
