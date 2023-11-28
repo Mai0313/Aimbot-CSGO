@@ -11,5 +11,6 @@ rich
 ultralytics
 pillow
 lapx
+onnx
 gradio==3.38.0
 git+https://github.com/fauskanger/D3DShot#egg=D3DShot
