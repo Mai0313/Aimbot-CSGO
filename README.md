@@ -1,6 +1,6 @@
 # AimAide for CSGO and soon CS2
 
-*UPDATE!
+\*UPDATE!
 <br>as long as raw input can not be disabled in CS2 the mouse mover does not work.<br>
 models seem to work tho
 
@@ -12,7 +12,6 @@ External realtime object detection-based aim aiding powered by <b>YOLOv8</b>, <b
 <br>
 
 <h3>Latest changes/additions</h3>
-
 
 <br>
 <b>13/09/23</b><br>
@@ -37,7 +36,6 @@ models/yolov8s_csgo_mirage-320-v62-pal-gen-bg-head.pt<br>
 16/04/23 - engine builder added to circumvent TensorRT incompatibilities <br>(by https://github.com/triple-Mu/YOLOv8-TensorRT)<br>
 15/04/23 - introduced 320x320 input models which drastically increase fps with YOLO and TensorRT<br>
 
-
 <h3>Supported Maps</h3>
 * Mirage
 
@@ -60,7 +58,7 @@ NVIDIA RTX4090 should max out at ~120fps on a 640x640 model. (also TensorRT)<br>
 3) Corresponding PyTorch CUDA Package -> https://pytorch.org/get-started/locally/<br>
 4) pip install -r requirements.txt<br><br>
 <b>Optional but recommended:</b><br>
-5) NVIDIA TensorRT >= 8.4 -> https://developer.nvidia.com/tensorrt -> https://docs.nvidia.com/deeplearning/tensorrt/install-guide/index.html<br> 
+5) NVIDIA TensorRT >= 8.4 -> https://developer.nvidia.com/tensorrt -> https://docs.nvidia.com/deeplearning/tensorrt/install-guide/index.html<br>
 <br>
 Speedup for bigger models with TensorRT is significant.<br>
 <s>Thats why all models bigger than medium will only be released as TensorRT engines</s>.<br>
@@ -92,22 +90,20 @@ Switch to CSGO and run/look around. At the end the average fps of the detector d
 <img src="/docs/benchmark_mode1.png">
 
 <h3>Arguments<h3>
-  
-| arg      | default   | Description                                                                                                |
-| ----      | ---       | ---                                                                                                       |
-| <sub>--input_size</sub> | <sub>320</sub>             | <sub>dimension of the input image for the detector</sub>                  |
-| <sub>--grabber</sub>    | <sub>'win32'</sub>         | <sub>select screen grabber (win32, d3d_gpu, d3d_np) </sub>                           |
-| <sub>--model</sub>      | <sub>models/yolov8s_csgo_mirage-320-v41-al-gen-bg</sub>| <sub>selected engine (TensorRT) or weights (YOLOv8)</sub>|       
-| <sub>--side </sub>      | <sub>'dm'</sub>  | <sub>which side your are on, 'ct', 't' or 'dm' (deathmatch)</sub>                  | 
-| <sub>--minconf </sub>   | <sub>0.75</sub>  | <sub>minimum detection confidence</sub>                                            |  
-| <sub>--sensitivity</sub>     | <sub>1</sub> | <sub>sensitivity mode, increase when having a high framerate or chaotic aim</sub>  |
-| <sub>--flickieness</sub>     |<sub>4</sub>  | <sub>how flicky the mouse mover behaves (4 is slow, 16 is very flicky)</sub>  |
-| <sub>--visualize</sub>       |<sub>False</sub> | <sub>show live detector output in a new window</sub>                               |
-| <sub>--view_only </sub>      |<sub>False</sub> | <sub>run in view only mode (disarmed)</sub>                                        |
-| <sub>--benchmark</sub>       | <sub>False</sub> | <sub>launch benchmark mode</sub>                                                   |
-| <sub>--no_engine_check</sub> | <sub>False</sub> | <sub>skips engine checking and building (run_tensorrt.py only)</sub>       |
 
-
+| arg                          | default                                                 | Description                                                                       |
+| ---------------------------- | ------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| <sub>--input_size</sub>      | <sub>320</sub>                                          | <sub>dimension of the input image for the detector</sub>                          |
+| <sub>--grabber</sub>         | <sub>'win32'</sub>                                      | <sub>select screen grabber (win32, d3d_gpu, d3d_np) </sub>                        |
+| <sub>--model</sub>           | <sub>models/yolov8s_csgo_mirage-320-v41-al-gen-bg</sub> | <sub>selected engine (TensorRT) or weights (YOLOv8)</sub>                         |
+| <sub>--side </sub>           | <sub>'dm'</sub>                                         | <sub>which side your are on, 'ct', 't' or 'dm' (deathmatch)</sub>                 |
+| <sub>--minconf </sub>        | <sub>0.75</sub>                                         | <sub>minimum detection confidence</sub>                                           |
+| <sub>--sensitivity</sub>     | <sub>1</sub>                                            | <sub>sensitivity mode, increase when having a high framerate or chaotic aim</sub> |
+| <sub>--flickieness</sub>     | <sub>4</sub>                                            | <sub>how flicky the mouse mover behaves (4 is slow, 16 is very flicky)</sub>      |
+| <sub>--visualize</sub>       | <sub>False</sub>                                        | <sub>show live detector output in a new window</sub>                              |
+| <sub>--view_only </sub>      | <sub>False</sub>                                        | <sub>run in view only mode (disarmed)</sub>                                       |
+| <sub>--benchmark</sub>       | <sub>False</sub>                                        | <sub>launch benchmark mode</sub>                                                  |
+| <sub>--no_engine_check</sub> | <sub>False</sub>                                        | <sub>skips engine checking and building (run_tensorrt.py only)</sub>              |
 
 <h3>FAQ</h3>
 Q: Why does AimAide seem to be stuck on launch?<br>
